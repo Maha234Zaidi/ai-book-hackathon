@@ -1,5 +1,12 @@
-export const topic_name = "/chatter";  // define karo
-export const service_name = "/add_two_ints"; 
+---
+id: simulator-api
+title: Educational ROS 2 Simulator API
+---
+
+export const topic_name = "/chatter";
+export const service_name = "/add_two_ints";
+export const robot_id = "robot_001";
+
 
 
 <!-- ---
