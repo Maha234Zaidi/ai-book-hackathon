@@ -1,55 +1,84 @@
-# [PROJECT_NAME] Constitution
-<!-- Example: Spec Constitution, TaskFlow Constitution, etc. -->
+<!-- 
+SYNC IMPACT REPORT:
+Version change: N/A (initial creation) → 1.0.0
+Added sections: All principles and sections based on Physical AI & Humanoid Robotics project requirements
+Removed sections: None (initial creation)
+Templates requiring updates: ⚠ pending (plan-template.md, spec-template.md, tasks-template.md to be checked)
+Follow-up TODOs: None
+-->
+# Physical AI & Humanoid Robotics Technical Book Constitution
 
 ## Core Principles
 
-### [PRINCIPLE_1_NAME]
-<!-- Example: I. Library-First -->
-[PRINCIPLE_1_DESCRIPTION]
-<!-- Example: Every feature starts as a standalone library; Libraries must be self-contained, independently testable, documented; Clear purpose required - no organizational-only libraries -->
+### Technical Accuracy
+All robotics, AI, ROS 2, Gazebo, Unity, NVIDIA Isaac, and VLA content must be correct, verifiable, and aligned with official documentation. This ensures readers receive factually accurate information that matches real-world implementations and official resources. Rationale: Technical books in robotics and AI must maintain high accuracy to be valuable educational resources.
 
-### [PRINCIPLE_2_NAME]
-<!-- Example: II. CLI Interface -->
-[PRINCIPLE_2_DESCRIPTION]
-<!-- Example: Every library exposes functionality via CLI; Text in/out protocol: stdin/args → stdout, errors → stderr; Support JSON + human-readable formats -->
+### Educational Clarity
+Writing style suitable for intermediate-to-advanced students in robotics, AI, and software engineering. Content must be accessible while maintaining technical depth. Rationale: The book targets a specific audience that needs both theoretical understanding and practical implementation knowledge.
 
-### [PRINCIPLE_3_NAME]
-<!-- Example: III. Test-First (NON-NEGOTIABLE) -->
-[PRINCIPLE_3_DESCRIPTION]
-<!-- Example: TDD mandatory: Tests written → User approved → Tests fail → Then implement; Red-Green-Refactor cycle strictly enforced -->
+### Modularity
+Book content divided into clear modules matching the quarter structure. Each module should be self-contained but building upon previous concepts. Rationale: Academic quarter structure helps organize complex content into digestible, time-manageable units for students.
 
-### [PRINCIPLE_4_NAME]
-<!-- Example: IV. Integration Testing -->
-[PRINCIPLE_4_DESCRIPTION]
-<!-- Example: Focus areas requiring integration tests: New library contract tests, Contract changes, Inter-service communication, Shared schemas -->
+### Reproducibility
+All examples, code snippets, ROS 2 commands, and architectures must be executable and testable. Code samples must run as documented in appropriate simulation environments (Gazebo, Unity, Isaac Sim). Rationale: Students must be able to reproduce examples to validate their learning and build confidence in the material.
 
-### [PRINCIPLE_5_NAME]
-<!-- Example: V. Observability, VI. Versioning & Breaking Changes, VII. Simplicity -->
-[PRINCIPLE_5_DESCRIPTION]
-<!-- Example: Text I/O ensures debuggability; Structured logging required; Or: MAJOR.MINOR.BUILD format; Or: Start simple, YAGNI principles -->
+### Consistency
+Terminology, formatting, API references, and code conventions must remain consistent across all chapters. Style guides must be followed uniformly throughout the book. Rationale: Inconsistent terminology and formatting create confusion for students learning complex technical concepts.
 
-### [PRINCIPLE_6_NAME]
+### Safety & Ethics
+Ensure responsible AI and robotics practices are highlighted throughout the book. All AI/robotics implementations must consider safety implications and ethical considerations. Rationale: As powerful technologies, AI and robotics require responsible handling and awareness of potential societal impacts.
 
+## Key Standards and Constraints
 
-[PRINCIPLE__DESCRIPTION]
+### Source Verification
+- 100% factual claims must refer to credible sources (ROS docs, Gazebo docs, Isaac Sim docs, research papers, NVIDIA blogs, robotics textbooks, etc.)
+- Prefer peer-reviewed robotics/AI research where needed
+- All code must follow appropriate standards (Python PEP8, ROS 2 rclpy guidelines)
 
-## [SECTION_2_NAME]
-<!-- Example: Additional Constraints, Security Requirements, Performance Standards, etc. -->
+### Citation Format
+IEEE or APA (choose one globally for the book). All sources must be properly attributed to maintain academic integrity.
 
-[SECTION_2_CONTENT]
-<!-- Example: Technology stack requirements, compliance standards, deployment policies, etc. -->
+### RAG Alignment
+- All text must be chunkable and structured for optimal retrieval
+- Each section should be written with retrieval-friendly formatting
+- Content must support accurate RAG chatbot responses without hallucinations
 
-## [SECTION_3_NAME]
-<!-- Example: Development Workflow, Review Process, Quality Gates, etc. -->
+### Documentation Format
+- Docusaurus-compatible Markdown
+- Must support sidebar navigation, versioning, and embedded code blocks
+- Code samples included inline with proper syntax highlighting
 
-[SECTION_3_CONTENT]
-<!-- Example: Code review requirements, testing gates, deployment approval process, etc. -->
+### Book Structure Constraints
+- Book Length: 8–12 chapters (minimum 30,000 words total)
+- Module-Level Coverage:
+  - Module 1: ROS 2 Nervous System (Nodes, Topics, Services, URDF, rclpy bridging)
+  - Module 2: Digital Twin Simulation (Gazebo physics, Unity rendering, sensors)
+  - Module 3: NVIDIA Isaac AI Brain (VSLAM, Nav2, synthetic data, perception)
+  - Module 4: Vision-Language-Action Systems (Whisper, LLM Planning, VLA pipelines)
+
+### RAG Chatbot Requirements
+- Must answer questions ONLY from the book content
+- Must support "answer from selected text only" capability
+- Must integrate with FastAPI backend, Qdrant vector DB, Neon Postgres metadata DB
+
+## Development Workflow and Success Criteria
+
+### Development Process
+- Content development follows Spec-Kit Plus methodology
+- Each chapter undergoes technical review by domain experts
+- Code examples are tested in actual simulation environments
+- RAG integration includes testing for accuracy and hallucination prevention
+
+### Success Criteria
+- The complete book is coherent, technically accurate, and fully deployable on Docusaurus
+- RAG chatbot can accurately answer questions about any chapter
+- All code examples and robotics workflows run successfully in simulation
+- All AI/robotics concepts (VSLAM, Nav2, ROS 2, Isaac, VLA) are explained with clarity and depth suitable for student learning
+- No factual, conceptual, or architectural inconsistencies remain
+- Book content produces high-quality embeddings for RAG without hallucinations
 
 ## Governance
-<!-- Example: Constitution supersedes all other practices; Amendments require documentation, approval, migration plan -->
 
-[GOVERNANCE_RULES]
-<!-- Example: All PRs/reviews must verify compliance; Complexity must be justified; Use [GUIDANCE_FILE] for runtime development guidance -->
+This constitution governs all aspects of the Physical AI & Humanoid Robotics Technical Book project. All development, writing, and review activities must align with these principles. Amendments to this constitution require documented justification and approval from project leadership. Versioning follows semantic versioning principles: MAJOR for governance changes, MINOR for principle additions, PATCH for clarifications.
 
-**Version**: [CONSTITUTION_VERSION] | **Ratified**: [RATIFICATION_DATE] | **Last Amended**: [LAST_AMENDED_DATE]
-<!-- Example: Version: 2.1.1 | Ratified: 2025-06-13 | Last Amended: 2025-07-16 -->
+**Version**: 1.0.0 | **Ratified**: 2025-12-09 | **Last Amended**: 2025-12-09
