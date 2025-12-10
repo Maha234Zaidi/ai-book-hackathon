@@ -1,6 +1,17 @@
-# Educational ROS 2 Simulator API
+export const topic_name = "/chatter";  // define karo
+export const service_name = "/add_two_ints"; 
 
-This document provides an overview of the educational ROS 2 simulator API that students will learn to work with when studying ROS 2 concepts. This represents a simplified simulation environment that demonstrates ROS 2 nodes, topics, services, and parameters without requiring actual ROS 2 installation.
+
+<!-- ---
+id: simulator-api
+title: Educational ROS 2 Simulator API
+---
+
+export const topic_name = "/chatter";
+export const service_name = "/add_two_ints";
+export const robot_id = "robot_001"; -->
+
+# Educational ROS 2 Simulator API
 
 ## Overview
 
@@ -105,7 +116,7 @@ List all available topics in the simulated system.
 Publish a message to a topic.
 
 **Path Parameters:**
-- `topic_name`: The name of the topic (e.g. "/chatter")
+- `topic_name`: The name of the topic (e.g. `/chatter`)
 
 **Request:**
 ```json
